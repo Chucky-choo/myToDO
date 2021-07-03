@@ -1,0 +1,7 @@
+.hdflex {
+    display: flex;
+}
+p {
+    margin: 10px;
+    color: silver;
+}
