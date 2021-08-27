@@ -42,7 +42,7 @@ export default class TodoListItem extends React.Component {
             {this.props.todos}
           </p>
           <div>
-            <IconButton color="secondary" onClick={onDeleted} aria-label="add an alarm">
+            <IconButton style={{color: 'black'}} onClick={onDeleted} aria-label="add an alarm">
               <DeleteForeverIcon/>
             </IconButton>
             <IconButton color='primary' onClick={OnMarkImportan} aria-label="add an alarm">
