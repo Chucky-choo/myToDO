@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=WindSong&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 46px;
+        font-family: 'Satisfy', cursive;
+        color: #393253;
+        margin: 10px 0;
+    }
+
+    img {
+        width: 20%
+    }
+}

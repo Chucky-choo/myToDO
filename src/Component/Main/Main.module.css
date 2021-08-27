@@ -1,19 +1,5 @@
-.line {
-    text-decoration: line-through;
-}
-
-.colorRed {
-    color: tomato;
-    width: 250px;
-}
-
-.usually {
-    color: black;
-    width: 250px;
-}
-
-.main{
-    margin: 2px;
+.wrapperTodos {
     display: flex;
-    height: 35px;
+    justify-content: center;
+    align-items: center;
 }

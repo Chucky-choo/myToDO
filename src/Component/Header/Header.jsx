@@ -1,21 +1,14 @@
 import React from "react";
-import s from './Header.module.css'
+import s from './Header.module.scss'
+import flower from '../../img/HeaderFlower.png'
 
-const Header = (props) => {
-  const text = props.active + `more to do,` + props.done +` done`
+const Header = () => {
 
-
-  return <div>
-    <div>
-      <h1>My toDo</h1>
+  return (
+    <div className={s.wrapper}>
+      <h1>My ToDo List</h1>
+      <img src={flower} alt=""/>
     </div>
-    <div className={s.hdflex}>
-      <h2>List 2.0</h2>
-      <p>
-        {text}
-      </p>
-    </div>
-  </div>
+  )
 }
-
 export default Header

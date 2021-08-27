@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+
+.line {
+  text-decoration: line-through;
+}
+
+
+.usually {
+  width: 250px;
+}
+
+.main {
+  margin: 2px;
+  display: flex;
+  height: 35px;
+
+  p {
+    cursor: pointer;
+    padding: 0 0 0 10px;
+    font-family: 'Allison', cursive;
+    font-size: 34px;
+    border-bottom: 2px dotted #393253;
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+@media (max-width: 380px) {
+
+  .main{
+    p {
+      width: 170px;
+    }
+  }
+
+}

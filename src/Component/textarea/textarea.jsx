@@ -1,5 +1,8 @@
 import React, {Component} from "react";
-import s from './textarea.module.css'
+import s from './textarea.module.scss'
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import {IconButton} from "@material-ui/core";
+
 
 export default class TextAddForm extends Component {
 
@@ -26,15 +29,13 @@ export default class TextAddForm extends Component {
     return (
       <form onSubmit={this.onSubmit}
             className={s.panel}>
-        <input
-          type="text"
-          onChange={this.onLabelChange}
-          value={this.state.label}
-          placeholder={"add text"}
-        />
-        <button className="btn btn-primary">
-          add
-        </button>
+        <input type="text"
+               onChange={this.onLabelChange}
+               value={this.state.label}
+               placeholder={"add text"} />
+        <IconButton onClick={this.onSubmit} color="primary" aria-label="add an alarm">
+          <AddCircleOutlineIcon/>
+        </IconButton>
       </form>
     )
   }

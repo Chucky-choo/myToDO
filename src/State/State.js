@@ -2,8 +2,8 @@ import {RerenderApp} from "../render";
 
 const state = {
   arr:[
-  {todos: "вивчити реакт", id: 1 , done: false, importance: true},
-  {todos: "write todo", id: 2 , done: false, importance: false},
+  {todos: "Learn React", id: 1 , done: true, importance: true},
+  {todos: "write todo", id: 2 , done: true, importance: false},
   {todos: 'learn guitar song', id: 3 , done: false, importance: true},
   {todos: 'drink coffee', id: 4, done: false, importance: false}
   ],

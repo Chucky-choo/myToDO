@@ -1,38 +1,45 @@
 import React from 'react' ;
-import s from './serh-panel.module.css'
+import s from '../textarea/textarea.module.scss'
+import {FormControl, InputLabel, makeStyles, MenuItem, Select} from "@material-ui/core";
 
-  const SearchPanel = (props) =>  {
 
-    const clickAll = () => {
-     props.visibleElement("All")
-    }
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
-    const clickActive = () => {
-      props.visibleElement("Active")
-    }
 
-    const clickDone = () => {
-      props.visibleElement("Done")
-    }
+
+  const SearchPanel = ({visibleElement, onLabelChange, visibility}) =>  {
+
+    const classes = useStyles();
+    // const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+      visibleElement(event.target.value);
+    };
 
   return (
       <div className={s.panel}>
-        <input placeholder={"search"}
-               onChange={props.onLabelChange}/>
-        <div className={"btn-group"}>
-          <button className={"btn btn-outline-primary"}
-                  onClick={clickAll}>
-            All
-          </button>
-          <button className={"btn btn-outline-success"}
-                  onClick={clickActive}>
-            Active
-          </button>
-          <button className={"btn btn-outline-dark"}
-                    onClick={clickDone}>
-            Done
-          </button>
-        </div>
+          <input placeholder={"search"}
+                 onChange={onLabelChange}/>
+        <FormControl className={classes.formControl}>
+          <InputLabel id="demo-simple-select-label">Filter</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={visibility}
+            onChange={handleChange}>
+            <MenuItem value={'All'}>all</MenuItem>
+            <MenuItem value={'Active'}>active</MenuItem>
+            <MenuItem value={'Done'}>done</MenuItem>
+          </Select>
+        </FormControl>
       </div>
     )
 }
