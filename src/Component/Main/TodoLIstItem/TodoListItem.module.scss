@@ -1,39 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
-
-
-.line {
-  text-decoration: line-through;
-}
+//@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 
 
 .usually {
-  width: 250px;
+  max-width: 520px;
+  width: 50vw;
 }
 
 .main {
-  margin: 2px;
   display: flex;
-  height: 35px;
+  margin: 4px;
 
-  p {
-    cursor: pointer;
-    padding: 0 0 0 10px;
-    font-family: 'Allison', cursive;
-    font-size: 34px;
-    border-bottom: 2px dotted #393253;
+
+  .textArea {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      height: 49px;
+      cursor: pointer;
+      padding: 0 0 0 10px;
+      font-family: 'Caveat', cursive;
+      font-size: 40px;
+      border-bottom: 2px dotted #393253;
+    }
   }
+
+
+  .iconsGroup {
+    align-self: flex-end;
+  }
+
 }
 
 .done {
   text-decoration: line-through;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
 
-  .main{
-    p {
-      width: 170px;
-    }
-  }
+  //.main {
+  //  p {
+  //    width: 170px;
+  //  }
+  //}
 
 }

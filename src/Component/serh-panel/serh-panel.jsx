@@ -1,12 +1,22 @@
 import React from 'react' ;
 import s from '../textarea/textarea.module.scss'
 import {FormControl, InputLabel, makeStyles, MenuItem, Select} from "@material-ui/core";
-
+// import font from 'url(https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap)';
 
 const useStyles = makeStyles((theme) => ({
+  '@font-face': {
+    fontFamily: 'Comfortaa',
+    src: 'url(https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Comfortaa&display=swap)'
+  },
+
   formControl: {
+    fontFamily: 'Comfortaa',
     margin: theme.spacing(1),
     minWidth: 120,
+
+    label:{
+
+    },
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -18,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
   const SearchPanel = ({visibleElement, onLabelChange, visibility}) =>  {
 
     const classes = useStyles();
-    // const [age, setAge] = React.useState('');
 
     const handleChange = (event) => {
       visibleElement(event.target.value);

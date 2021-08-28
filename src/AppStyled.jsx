@@ -17,11 +17,12 @@ export const useStyles = makeStyles({
   root: {
     width: '100%',
     maxWidth: 800,
-    maxHeight: 1000,
+    maxHeight: '95vh',
     backgroundImage: `url(${background})`,
     backgroundSize: '100%',
     boxShadow: '7px 8px 2px 1px rgb(225,216,209)',
     margin: '0 10px',
     padding: '35px 0 25px 0',
   },
+
 })

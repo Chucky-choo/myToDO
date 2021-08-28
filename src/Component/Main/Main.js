@@ -1,11 +1,12 @@
 import React from 'react' ;
 import TodoListItem from "./TodoLIstItem/TodoListIten";
-import s from './Main.module.css'
+import s from './Main.module.scss'
 
 const Main = (props) => {
+
   const element = props.visible.map( item => {
     return (
-      <div className={s.wrapperTodos}>
+      <div className={s.wrapperTodo}>
         <TodoListItem
           key={item.id}
           deleteTodos={props.deleteTodos}
@@ -17,7 +18,15 @@ const Main = (props) => {
 
 
   )});
-  return element
+
+
+  return (
+    <div className={s.container__wrapperTodo}>
+      { element }
+    </div>
+  )
+
+
 
 
 }

@@ -3,7 +3,7 @@ import s from './TodoListItem.module.scss';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
-import {IconButton} from "@material-ui/core";
+import {IconButton, Typography} from "@material-ui/core";
 
 
 export default class TodoListItem extends React.Component {
@@ -35,20 +35,26 @@ export default class TodoListItem extends React.Component {
     return (
       <div key="ul">
         <div className={s.main}>
-          <p key={this.props.id}
-             style={style}
-             className={classNames}
-             onClick={onLabelClick}>
-            {this.props.todos}
-          </p>
-          <div>
+          <div className={s.textArea}>
+            <Typography
+              noWrap
+              key={this.props.id}
+              style={style}
+              className={classNames}
+              onClick={onLabelClick}
+            >
+              {this.props.todos}
+            </Typography>
+            {/*<p>{this.props.todos.length}</p>*/}
+          </div>
+          <div className={s.iconsGroup}>
             <IconButton style={{color: 'black'}} onClick={onDeleted} aria-label="add an alarm">
               <DeleteForeverIcon/>
             </IconButton>
             <IconButton color='primary' onClick={OnMarkImportan} aria-label="add an alarm">
               {this.props.importance
                 ? <StarIcon/>
-                : <StarBorderIcon />}
+                : <StarBorderIcon/>}
             </IconButton>
           </div>
         </div>

@@ -32,9 +32,14 @@ export default class TextAddForm extends Component {
         <input type="text"
                onChange={this.onLabelChange}
                value={this.state.label}
-               placeholder={"add text"} />
-        <IconButton onClick={this.onSubmit} color="primary" aria-label="add an alarm">
-          <AddCircleOutlineIcon/>
+               placeholder={"add text"}/>
+        <IconButton
+
+          onClick={this.onSubmit}
+          color="primary"
+          aria-label="add an alarm"
+        >
+          <AddCircleOutlineIcon style={{fontSize: 42}}/>
         </IconButton>
       </form>
     )
