@@ -30,7 +30,7 @@ export default class TodoListItem extends React.Component {
     let onDeleted = () => {
       return this.props.deleteTodos(this.props.id)
     }
-
+//saffsa
 
     return (
       <div key="ul">
